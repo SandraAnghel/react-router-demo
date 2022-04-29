@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Narwhal from './components/Narwhal/Narwhal';
 import Whale from './components/Whale/Whale';
 
+
 function App() {
   return (
 
@@ -11,9 +12,13 @@ function App() {
       <BrowserRouter>
         <h1>Marine Mammals</h1>
         <nav>
-          <Link to="/manatee">Manatee</Link>
-          <Link to="/narwhal">Narwhal</Link>
-          <Link to="/whale">Whale</Link>
+          <ul>
+          <li><Link to="/manatee">Manatee</Link></li>
+          <li><Link to="/narwhal">Narwhal</Link></li>
+          <li><Link to="/whale">Whale</Link></li>
+          <li><Link to="/whale?type=beluga">Beluga Whale</Link></li>
+          <li><Link to="/whale?type=blue">Blue Whale</Link></li>
+          </ul>
         </nav>
         <Routes>
           <Route path="/manatee" element={<Manatee />} />
